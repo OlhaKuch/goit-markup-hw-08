@@ -1,0 +1,23 @@
+.social__item {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+.social__link {
+  @extend %align;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: background-color var(--transition-dur-fun), color var(--transition-dur-fun);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--elements-color);
+  }
+}

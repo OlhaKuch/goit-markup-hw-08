@@ -1,0 +1,30 @@
+.services {
+  padding-top: 0;
+}
+.services__title {
+  @include font(36px, 700);
+  line-height: 1.17;
+  text-align: center;
+  color: var(--names-color);
+}
+
+.services__list {
+  display: flex;
+  column-gap: 30px;
+}
+.service__overlay {
+  position: relative;
+}
+.service__discribe {
+  font-weight: 700;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  @extend %align;
+  width: 370px;
+  height: 70px;
+  background-color: #2f303a80;
+  color: var(--elements-color);
+  position: absolute;
+  bottom: 0;
+}

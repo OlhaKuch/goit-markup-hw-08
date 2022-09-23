@@ -1,0 +1,38 @@
+.feartures__list {
+  display: flex;
+  column-gap: 30px;
+}
+.features__general {
+  display: flex;
+  min-width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 30px;
+}
+.feature-antenna {
+  align-items: center;
+  justify-content: center;
+}
+.feature-clock,
+.feature-diagram,
+.feature-astronaut {
+  align-items: center;
+  justify-content: center;
+}
+
+.feartures__title {
+  max-width: 270px;
+}
+
+.feartures__name {
+  @include font(14px, 700);
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--names-color);
+}
+.features__discription {
+  font-weight: 400;
+  line-height: 1.71;
+}

@@ -1,0 +1,44 @@
+.clients {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--names-color);
+}
+
+.clients__link {
+  @extend %align;
+  width: 170px;
+  height: 92px;
+  border: #afb1b8 solid 1px;
+  color: #afb1b8;
+  border-radius: 4px;
+  transition: border var(--transition-dur-fun), color var(--transition-dur-fun);
+  &:hover,
+  &:focus {
+    border: var(--accent-color) solid 1px;
+    color: var(--accent-color);
+  }
+}
+.clients__title {
+  @include font(36px, 700);
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients__logo {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+  transition: color var(--transition-dur-fun);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.clients__list {
+  display: flex;
+  column-gap: 30px;
+}
