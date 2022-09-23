@@ -22,14 +22,14 @@
     <header class="page-header">
       <div class="container page-header__container">
         <nav class="navigation">
-          <a class="logo navigation__logo link" href="./index.html"
+          <a class="logo navigation__logo link navigation__link" href="./index.html"
             >Web<span class="logo__style">Studio</span></a
           >
           <ul lang="uk" class="navigation__list list">
             <li>
               <a
-                class="navigation__link link navigation__link_current navigation__link_color"
                 href="./index.html"
+                class="navigation__link link navigation__link_current navigation__link_color"
                 >Cтудія</a
               >
             </li>
@@ -41,6 +41,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="open-btn js-open-menu">
+          <svg width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu" class="open-btn__icon"></use>
+          </svg>
+        </button>
         <ul class="contacts navigations__contacts list">
           <li>
             <a href="mailto:info@devstudio.com" class="contacts__item link"
@@ -57,13 +62,44 @@
             >
           </li>
         </ul>
-        <button type="menu" class="open-btn">
-          <svg width="40" height="40">
-            <use href="./images/symbol-defs.svg#icon-menu" class="open-btn__icon"></use>
-          </svg>
-        </button>
-        
-        </button>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn js-close-menu">
+            <svg class="mobile-menu__close-icon">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul lang="uk" class="list">
+            <li>
+              <a class="link" href="./index.html">Cтудія</a>
+            </li>
+            <li>
+              <a class="link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li>
+              <a class="link" href="">Контакти</a>
+            </li>
+          </ul>
+          <ul class="list">
+            <li>
+              <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+            </li>
+            <li>
+              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            </li>
+          </ul>
+          <ul class="list">
+            <li>
+              <a href="" class="link">Instagram</a>
+            </li>
+            <li>
+              <a href="" class="link">Twitter</a>
+            </li>
+            <li><a href="" class="link">Facebook</a></li>
+            <li><a href="" class="link">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <!--Main content-->
@@ -538,7 +574,8 @@
           </form>
         </div>
       </div>
-    </footer>
-    <script src="./js/modal.js"></script> -->
+    </footer> -->
+    <script src="./js/menu.js"></script>
+    <!--<script src="./js/modal.js"></script> -->
   </body>
 </html>

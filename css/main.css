@@ -86,13 +86,27 @@ section {
 }
 
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .from-h3-to-text {
   margin-bottom: 10px;
 }
@@ -323,6 +337,46 @@ section {
   background-color: var(--backfround-active-button);
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-dur-fun), visibility var(--transition-dur-fun);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.mobile-menu__close-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu__container {
+  position: relative;
+  padding-left: 40px;
+}
+
 .feartures__list {
   display: flex;
   column-gap: 30px;
@@ -367,39 +421,41 @@ section {
   line-height: 1.71;
 }
 
+.open-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 0;
+  margin: 0;
+}
+
+.open-btn__icon {
+  fill: var(--names-color);
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 @media screen and (max-width: 767px) {
-  .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .page-header {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .page-header__container {
-    width: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   .navigation__list {
     display: none;
   }
   .contacts {
     display: none;
   }
-  .open-btn {
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    line-height: 0;
-    margin: 0;
-  }
-  .open-btn__icon {
-    fill: #000;
-  }
 }
 @media screen and (min-width: 768px) {
+  .open-btn {
+    display: none;
+  }
   .navigation__list {
     display: block;
   }
