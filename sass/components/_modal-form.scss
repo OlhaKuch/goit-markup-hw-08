@@ -140,3 +140,26 @@
     background-color: var(--backfround-active-button);
   }
 }
+@media screen and (max-width: 767px) {
+  .check-box-form {
+    @include font(12px, 400);
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .check-box-form {
+    @include font(12px, 400);
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .check-box-form {
+    @include font(14px, 400);
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}

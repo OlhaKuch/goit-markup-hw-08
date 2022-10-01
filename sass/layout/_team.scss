@@ -1,37 +1,82 @@
-.team__title {
-  @include font(36px, 700);
-  line-height: 1.17;
-  text-align: center;
-  color: var(--names-color);
-  margin-bottom: 50px;
+@media screen and (max-width: 767px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .team__title {
+    @include font(28px, 700);
+    line-height: 1.18;
+    text-align: center;
+    color: var(--names-color);
+    margin-bottom: 30px;
+  }
+  .team__description:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
-
 .team {
   background-color: #f5f4fa;
-}
-.team__description {
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-.team__position {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
+  &__description {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__position {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  &__person {
+    @include font(16px, 500);
+    line-height: 1.19;
+    color: var(--names-color);
+  }
+  &__skills {
+    @include font(16px, 400);
+    line-height: 1.16;
+    margin-bottom: 16px;
+  }
 }
 
-.team__list {
-  display: flex;
-  column-gap: 30px;
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .team__title {
+    @include font(28px, 700);
+    line-height: 1.18;
+    text-align: center;
+    color: var(--names-color);
+    margin-bottom: 30px;
+  }
+  .team__description {
+    max-width: 354px;
+  }
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-.team__person {
-  @include font(16px, 500);
-  line-height: 1.19;
-  color: var(--names-color);
-}
-.team__skills {
-  @include font(16px, 400);
-  line-height: 1.16;
-  margin-bottom: 16px;
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .team__title {
+    @include font(36px, 700);
+    line-height: 1.17;
+
+    margin-bottom: 50px;
+  }
+  .team__description {
+    max-width: 270px;
+  }
+  .team__list {
+    display: flex;
+    flex-direction: row;
+  }
 }

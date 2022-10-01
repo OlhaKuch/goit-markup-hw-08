@@ -1,8 +1,48 @@
-.button-list {
-  display: flex;
-  justify-content: center;
-  column-gap: 8px;
+@media screen and (max-width: 767px) {
+    .portfolio-list {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .button-list {
+        max-width: 326px;
+        display: flex;
+        column-gap: 8px;
+        row-gap: 15px;
+        flex-wrap: wrap;
+      } 
+      .photo-list {
+        display:block;
+        width: 100%;
+      } 
+      .photo-list-item {
+        display: block;
+      }
+      .photo-list-item:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      .our-works-img {
+        width: 100%;
+      } 
 }
+
+@media screen and (min-width: 768px){
+.button-list {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 8px;
+    justify-content: center;
+}
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+.photo-list-item {
+    max-width: 354px;
+}
+}
+
 .portfolio-button-style {
   font-family: inherit;
   @include font(16px, 500);
@@ -54,12 +94,12 @@
 
 /*list*/
 .photo-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 30px;
   margin-top: 50px;
-  &.our-works-link:hover,
-  &.our-works-link:focus {
+  &-item:hover,
+  &-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }

@@ -1,5 +1,25 @@
+@media screen and (max-width: 767px) {
+  .services {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .services {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    display: block;
+  }
+}
+
 .services {
   padding-top: 0;
+}
+.services__list-item {
+  min-width: 370px;
 }
 .services__title {
   @include font(36px, 700);

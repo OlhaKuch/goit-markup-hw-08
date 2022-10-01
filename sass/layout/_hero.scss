@@ -1,19 +1,15 @@
 .service {
-  background-color: #2f303a;
+  background-color: rgba(47, 48, 58, 0.4);
   text-align: center;
-  padding: 200px 0;
-  background-image: linear-gradient(#2f303a40, #2f303a40), url(../images/Hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  max-width: 1600px;
-  height: 600px;
+  padding: 118px 0;
+
   margin-left: auto;
   margin-right: auto;
+
   &__title {
-    width: 696px;
-    @include font(44px, 900);
-    line-height: 1.36;
+    width: 360px;
+    @include font(26px, 900);
+    line-height: 1.6;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--elements-color);
@@ -30,12 +26,71 @@
     border-radius: 4px;
     color: var(--elements-color);
     background-color: var(--background-button);
-    min-width: 216px;
-    padding: 10px 32px;
+    min-width: 200px;
+    padding: 10px 24px;
     transition: background-color var(--transition-dur-fun);
   }
   &__button:hover,
   &__button:focus {
     background-color: var(--backfround-active-button);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service {
+    background-image: linear-gradient(#2f303a40, #2f303a40), url(/images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .service {
+    background-image: url(/images/hero-mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .service {
+    background-image: linear-gradient(#2f303a40, #2f303a40), url(/images/Hero-tablet.jpg);
+    min-width: 768px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
+  .service {
+    background-image: url(/images/Hero-tablet@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .service {
+    background-image: linear-gradient(#2f303a40, #2f303a40), url(/images/hero-desktop.jpg);
+    min-width: 1200px;
+    height: 600px;
+    padding: 200px 0;
+    &__title {
+      @include font(44px, 900);
+      line-height: 1.36;
+      letter-spacing: 0.06em;
+      width: 696px;
+    }
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .service {
+    background-image: url(/images/hero-desktop@2.jpg);
   }
 }

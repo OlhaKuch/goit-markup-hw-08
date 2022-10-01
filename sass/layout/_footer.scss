@@ -1,3 +1,42 @@
+@media screen and (max-width: 767px) {
+  .container-for-adress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .connect-variants {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .container-for-connection {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-left: 76px;
+    padding-right: 88px;
+    margin-bottom: 60px;
+  }
+  .container-for-adress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .connect-variants {
+    text-align: center;
+  }
+}
+
+.footer-page {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo,
 .footer-logo-style {
   font-family: var(--secondary-font);
@@ -9,6 +48,7 @@
     color: var(--accent-color);
   }
 }
+
 .footer-logo {
   color: var(--accent-color);
 }
@@ -22,15 +62,11 @@
   text-transform: uppercase;
   color: #ffffff;
   padding-bottom: 20px;
+  text-align: center;
 }
-.container-for-adress {
-  margin-right: 70px;
-}
-.footer-page {
-  background-color: #2f303a;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
+// .container-for-adress {
+//   margin-right: 70px;
+// }
 
 .address-map,
 .address-mail,
@@ -40,11 +76,11 @@
   font-style: normal;
   line-height: 1.71;
 }
-.connect-address {
-  margin-top: 20px;
-}
+// .connect-address {
+//   margin-top: 20px;
+// }
 .connect-item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .address-map {
   color: var(--elements-color);
@@ -69,14 +105,11 @@
   color: var(--accent-color);
 }
 
-.footer {
-  display: flex;
-  align-items: baseline;
-}
 .social-media-footer {
   display: flex;
   justify-content: center;
   column-gap: 10px;
+  margin-bottom: 60px;
 }
 
 .social-media-footer-link {
@@ -107,15 +140,15 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--elements-color);
-  margin-bottom: 20px;
+  text-align: center;
 }
-.submit {
-  display: flex;
-  justify-content: center;
-  column-gap: 12px;
-}
+// .submit {
+//   display: flex;
+//   justify-content: center;
+//   column-gap: 12px;
+// }
 .enter-email {
-  width: 358px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -123,6 +156,7 @@
   background-color: transparent;
   color: #ffff;
   padding-left: 16px;
+  margin-bottom: 20px;
 }
 .enter-button {
   width: 200px;
@@ -136,9 +170,46 @@
 }
 .sign-up {
   @extend %align;
+  padding: 10px 28px 10px 31px;
+  display: flex;
   column-gap: 10px;
-  padding: 10px 28px;
 }
-.container-for-social {
-  margin-right: auto;
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0 auto;
+  }
+  .container-for-connection {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 93px;
+  }
+  .container-for-adress {
+    margin-right: 70px;
+  }
+  .connect-variants {
+    text-align: left;
+  }
+  .call-to-action,
+  .footer-logo {
+    margin-right: auto;
+  }
+  .submit {
+    display: flex;
+  }
+  .enter-email {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }

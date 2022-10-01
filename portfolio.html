@@ -19,17 +19,17 @@
   <body>
     <!--Header-->
     <header class="page-header">
-      <div class="container page-header-container">
+      <div class="container page-header__container">
         <nav class="navigation">
-          <a class="logo navigation__logo link" href="./index.html"
+          <a class="logo navigation__logo link navigation__link" href="./index.html"
             >Web<span class="logo__style">Studio</span></a
           >
           <ul lang="uk" class="navigation__list list">
             <li>
-              <a class="navigation__link link" href="./index.html">Cтудія</a>
+              <a href="./index.html" class="navigation__link link navigation__link_color">Cтудія</a>
             </li>
             <li>
-              <a class="navigation__link link navigation__link_current" href="./portfolio.html"
+              <a class="navigation__link navigation__link_current link" href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
@@ -38,8 +38,13 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="open-btn js-open-menu">
+          <svg width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-menu" class="open-btn__icon"></use>
+          </svg>
+        </button>
         <ul class="contacts navigations__contacts list">
-          <li>
+          <li class="contacts__list">
             <a href="mailto:info@devstudio.com" class="contacts__item link"
               ><svg class="icon-mail" width="16" height="12">
                 <use href="./images/symbol-defs.svg#icon-envelope-hover"></use></svg
@@ -54,6 +59,54 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn js-close-menu">
+            <svg class="mobile-menu__close-icon">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul lang="uk" class="mobile-menu__nav list">
+            <li class="mobile-menu__nav-item mobile-menu__current">
+              <a class="mobile-menu__nav-link link" href="./index.html">Cтудія</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link" href="">Контакти</a>
+            </li>
+          </ul>
+          <div class="modile-menu__contacts">
+            <ul class="mobile-menu__send list">
+              <li class="mobile-menu__send-item">
+                <a href="mailto:info@devstudio.com" class="mobile-menu__send-link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="mobile-menu__send-item">
+                <a href="tel:+380961111111" class="mobile-menu__send-link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="list mobile-menu__social-list">
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link link">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link link">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link link">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!--Main-->
@@ -79,10 +132,10 @@
             </li>
           </ul>
           <ul class="list photo-list">
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/01techno.jpg" alt="Технокряк" width="370" />
+                  <img class="our-works-img" src="./images/our_works/01techno.jpg" alt="Технокряк"/>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -95,10 +148,10 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/02phoster_new_orlean.jpg" alt="Постер" width="370" />
+                  <img class="our-works-img" src="./images/our_works/02phoster_new_orlean.jpg" alt="Постер"" />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -111,10 +164,10 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/03Seafood.jpg" alt="Seafood" width="370" />
+                  <img class="our-works-img" src="./images/our_works/03Seafood.jpg" alt="Seafood"/>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -127,10 +180,10 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/04prime.jpg" alt="Prime project" width="370" />
+                  <img class="our-works-img" src="./images/our_works/04prime.jpg" alt="Prime project"/>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -143,10 +196,10 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/05boxes.jpg" alt="Boxes project" width="370" />
+                  <img class="our-works-img" src="./images/our_works/05boxes.jpg" alt="Boxes project" />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -159,14 +212,13 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img
+                  <img class="our-works-img"
                     src="./images/our_works/06inspiration_web.jpg"
                     alt="Inspiration_web"
-                    width="370"
-                  />
+                    />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -179,10 +231,10 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/07LE.jpg" alt="Limited edition" width="370" />
+                  <img class="our-works-img" src="./images/our_works/07LE.jpg" alt="Limited edition"/>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -195,10 +247,10 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img src="./images/our_works/08lab.jpg" alt="LAB" width="370" />
+                  <img class="our-works-img" src="./images/our_works/08lab.jpg" alt="LAB"/>
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -211,13 +263,13 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="photo-list-item">
               <a class="our-works-link link" href="">
                 <div class="overlay-portfolio">
-                  <img
+                  <img class="our-works-img"
                     src="./images/our_works/09grow_business.jpg"
                     alt="Growing business_app"
-                    width="370"
+                    
                   />
                   <p class="overlay-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -237,81 +289,92 @@
     </main>
     <!--Footer-->
     <footer class="footer-page">
-      <div class="container footer">
-        <div class="container-for-adress">
-          <a class="footer-logo link" href="./index.html"
-            >Web<span class="footer-logo-style">Studio</span></a
-          >
-          <address class="connect-with-us">
-            <ul class="connect-variants list">
-              <li class="connect-address connect-item" lang="uk">
-                <a
-                  class="address-map link"
-                  href="https://goo.gl/maps/ekt3GAmKJwnspYYz7"
-                  target="_blank"
-                  rel="noreferer noopener nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="container footer">
+          <div class="container-for-connection">
+            <div class="container-for-adress">
+            <a class="footer-logo link" href="./index.html"
+              >Web<span class="footer-logo-style">Studio</span></a
+            >
+            <address class="connect-with-us">
+              <ul class="connect-variants list">
+                <li class="connect-address connect-item" lang="uk">
+                  <a
+                    class="address-map link"
+                    href="https://goo.gl/maps/ekt3GAmKJwnspYYz7"
+                    target="_blank"
+                    rel="noreferer noopener nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="connect-mail connect-item">
+                  <a class="address-mail link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="connect-call connect-item">
+                  <a class="number-call link" href="tel.:+380961111111">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+            </div>
+          
+          <div class="container-for-social">
+            <p lang="uk" class="connection">Приєднуйтесь</p>
+            <ul class="social-media-footer">
+              <li class="list">
+                <a href="" class="social-media-footer-link">
+                  <svg class="social-media-item-footer footer-link">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="connect-mail connect-item">
-                <a class="address-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="list">
+                <a href="" class="social-media-footer-link">
+                  <svg class="social-media-item-footer footer-link">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="connect-call connect-item">
-                <a class="number-call link" href="tel.:+380961111111">+38 096 111 11 11</a>
+              <li class="list">
+                <a href="" class="social-media-footer-link">
+                  <svg class="social-media-item-footer footer-link">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list">
+                <a href="" class="social-media-footer-link">
+                  <svg class="social-media-item-footer footer-link">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="container-for-social">
-          <h3 lang="uk" class="connection">Приєднуйтесь</h3>
-          <ul class="social-media-footer">
-            <li class="list">
-              <a href="" class="social-media-footer-link">
-                <svg class="social-media-item-footer footer-link">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="list">
-              <a href="" class="social-media-footer-link">
-                <svg class="social-media-item-footer footer-link">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="list">
-              <a href="" class="social-media-footer-link">
-                <svg class="social-media-item-footer footer-link">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="list">
-              <a href="" class="social-media-footer-link">
-                <svg class="social-media-item-footer footer-link">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <form action="Sing-up">
-            <p class="call-to-action" lang="uk">Підпишіться на розсилку</p>
-            <div class="submit">
-              <label>
-                <input type="email" name="email" class="enter-email" placeholder="E-mail" />
-              </label>
-              <button type="submit" class="enter-button">
-                <div class="sign-up">
-                  <p lang="uk">Підписатися</p>
-                  <svg class="icon-tel" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-send"></use>
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </form>
+          </div>
+          </div>
+                  
+            <form action="sing-up" class="sign-up-form">
+              <p class="call-to-action" lang="uk">Підпишіться на розсилку</p>
+              <div class="submit">
+                <label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="enter-email"
+                    placeholder="E-mail"
+                    required
+                  />
+                </label>
+                <button type="submit" class="enter-button">
+                  <div class="sign-up">
+                    <p lang="uk">Підписатися</p>
+                    <svg class="icon-tel" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-send"></use>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </form>
         </div>
       </div>
     </footer>
