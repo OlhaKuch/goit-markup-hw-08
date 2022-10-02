@@ -36,6 +36,8 @@
   }
   .feartures__title {
     display: block;
+  }
+  .feartures__title:not(:last-child) {
     margin-bottom: 30px;
   }
 }

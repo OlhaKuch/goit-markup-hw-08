@@ -7,7 +7,7 @@
   margin-right: auto;
 
   &__title {
-    width: 360px;
+    width: 300px;
     @include font(26px, 900);
     line-height: 1.6;
     letter-spacing: 0.06em;
@@ -56,7 +56,7 @@
 
 @media screen and (min-width: 768px) {
   .service {
-    background-image: linear-gradient(#2f303a40, #2f303a40), url(/images/Hero-tablet.jpg);
+    background-image: linear-gradient(#2f303a40, #2f303a40), url(../images/Hero-tablet.jpg);
     min-width: 768px;
     height: 400px;
   }
@@ -67,7 +67,7 @@
   screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px),
   screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
   .service {
-    background-image: url(/images/Hero-tablet@2x.jpg);
+    background-image: linear-gradient(#2f303a40, #2f303a40), url(../images/Hero-tablet@2x.jpg);
   }
 }
 

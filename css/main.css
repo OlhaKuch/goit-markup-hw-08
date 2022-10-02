@@ -206,8 +206,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    width: 300px;
+    height: 640px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -441,9 +441,6 @@ body {
     padding-left: 40px;
     max-width: 480px;
   }
-  .mobile-menu__current {
-    color: var(--accent-color);
-  }
   .mobile-menu__nav {
     font-family: inherit;
     font-weight: 500;
@@ -451,7 +448,10 @@ body {
     line-height: 1.18;
     letter-spacing: 0.02em;
     padding-top: 48px;
-    margin-bottom: 302px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 306px;
   }
   .mobile-menu__nav-item {
     display: block;
@@ -494,6 +494,7 @@ body {
   }
   .mobile-menu__social-list {
     display: flex;
+    flex-wrap: wrap;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.22;
@@ -516,6 +517,10 @@ body {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
 }
+.mobile-menu__current {
+  color: var(--accent-color);
+}
+
 .features__general {
   display: flex;
   width: 100%;
@@ -556,6 +561,8 @@ body {
   }
   .feartures__title {
     display: block;
+  }
+  .feartures__title:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -728,7 +735,7 @@ body {
   margin-right: auto;
 }
 .service__title {
-  width: 360px;
+  width: 300px;
   font-size: 26px;
   font-weight: 900;
   line-height: 1.6;
@@ -772,14 +779,14 @@ body {
 }
 @media screen and (min-width: 768px) {
   .service {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.2509803922), rgba(47, 48, 58, 0.2509803922)), url(/images/Hero-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.2509803922), rgba(47, 48, 58, 0.2509803922)), url(../images/Hero-tablet.jpg);
     min-width: 768px;
     height: 400px;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1199px), screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1199px), screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1199px) {
   .service {
-    background-image: url(/images/Hero-tablet@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.2509803922), rgba(47, 48, 58, 0.2509803922)), url(../images/Hero-tablet@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -956,6 +963,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
   }
 }
 .clients__link {
@@ -1011,7 +1019,7 @@ body {
     gap: 30px;
   }
   .clients__link {
-    width: 170px;
+    max-width: 170px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1024,6 +1032,15 @@ body {
   }
   .connect-variants {
     text-align: center;
+  }
+  .enter-email {
+    width: 100%;
+  }
+  .sign-up-form {
+    display: block;
+  }
+  .call-to-action {
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 767px) {
@@ -1161,7 +1178,7 @@ body {
 }
 
 .enter-email {
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1188,13 +1205,6 @@ body {
   padding: 10px 28px 10px 31px;
   display: flex;
   column-gap: 10px;
-}
-
-.sign-up-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1224,8 +1234,14 @@ body {
     display: flex;
   }
   .enter-email {
-    width: 358px;
+    width: 100%;
     margin-bottom: 0;
     margin-right: 12px;
+  }
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
