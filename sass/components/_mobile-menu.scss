@@ -2,6 +2,10 @@
   .mobile-menu__container {
     padding-top: 48px;
     padding-left: 48px;
+    margin-bottom: auto;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
   }
   .mobile-menu {
     position: fixed;
@@ -46,7 +50,7 @@
     position: relative;
     padding-left: 40px;
     max-width: 480px;
-  
+ 
   }
 
 .mobile-menu__nav {
@@ -59,13 +63,13 @@
  display: flex;
  flex-direction: column;
  height: 100%;
- margin-bottom: 306px;
+ margin-bottom: auto;
 }
 .mobile-menu__nav-item {
   display: block;
 }
 .mobile-menu__nav-item:not(:last-child) {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 .mobile-menu__contacts {
   display: flex;
